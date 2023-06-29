@@ -32,7 +32,7 @@ public class ShippingOrder : EntityBase
         {
             var servicePrice = service.FixedPrice + service.PricePerKg * WeightInKg;
 
-            TotalPrice = servicePrice;
+            TotalPrice += servicePrice;
             Services.Add(new ShippingOrderService(service.Title, servicePrice));
         }
     }
